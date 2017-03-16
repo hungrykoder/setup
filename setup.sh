@@ -93,6 +93,7 @@ setup() {
             fi
         fi
     done
+    source $HOME/.bash_profile
     echo_green "Done!!!"
 }
 
