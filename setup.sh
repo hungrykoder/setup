@@ -1,7 +1,7 @@
 #!/bin/bash
-# curl -sL https://goo.gl/uv2Es1 | bash
-# curl -sL https://tinyurl.com/b4tsetup | bash
-# curl -s https://gist.githubusercontent.com/hungrykoder/41e51f7a8d25f77603133b2cfbe4e5f7/raw/9870945c34181a8287e96e4a29104f7533a21efe/setup.sh | bash
+# curl -sL https://goo.gl/LLVzv9 | bash
+# curl -sL https://tinyurl.com/b4t-shell | bash
+# curl -s  https://raw.githubusercontent.com/hungrykoder/setup/master/setup.sh | bash
 
 OLDWD=`pwd`
 finish() {
