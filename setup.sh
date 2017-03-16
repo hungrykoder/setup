@@ -77,7 +77,7 @@ setup() {
         if [ -f "${config_dir}/${file_name}" ]; then
             if [ ! -f "${HOME}/${file_name}" ]; then
                 echo "Creating symlink:  ${HOME}/${file_name} -> ${config_dir}/${file_name}"
-                ln -s "${config_dir}/${file_name}" "${config_dir}/${file_name}"
+                ln -s "${config_dir}/${file_name}" "${HOME}/${file_name}"
             else
                 echo_yellow "${HOME}/${file_name} already exist."
                 if [[ "${file_name}" = ".bash_profile" ]]; then
