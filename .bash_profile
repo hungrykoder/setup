@@ -1,5 +1,5 @@
 # Add `~/bin` to the `$PATH`
-export PS1="\[\033[33m\][\u@\[\033[1;31m\]\h]\]\033[0m in :\w \n\033[1;34m\][\d \t]\[\`if [[ \$? = "0" ]]; then echo '\e[0;32m > \e[0m'; else echo '\e[0;31m > \e[0m' ; fi\`\]\033[0m"
+export PS1="\[\033[33m\][\u@\[\033[1;31m\]\h]\]\033[0m in :\w \n\033[1;34m\][\d \t]\[\`if [[ \$? = "0" ]]; then echo '\[\033[01;32m\] > [\033[00m\]'; else echo '[\033[01;31m\] > [\033[00m\]' ; fi\`\]"
 
 export PATH="$HOME/bin:$PATH";
 
