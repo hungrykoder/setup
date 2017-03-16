@@ -1,4 +1,7 @@
 #!/bin/bash
+# WARNING!!! This utility is provided as if, and author assumes no responsibility
+# for any damage this script may cause
+
 # curl -sL https://goo.gl/LLVzv9 | bash -s update
 # curl -sL https://tinyurl.com/b4t-shell | bash -s update
 
