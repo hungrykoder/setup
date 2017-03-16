@@ -1,8 +1,8 @@
 #!/bin/bash
-# curl -sL https://goo.gl/LLVzv9 | bash
-# curl -sL https://tinyurl.com/b4t-shell | bash
-# curl -s  https://raw.githubusercontent.com/hungrykoder/setup/master/setup.sh | bash
+# curl -sL https://goo.gl/LLVzv9 | bash -s update
+# curl -sL https://tinyurl.com/b4t-shell | bash -s update
 
+in_arg="${1}"
 OLDWD=`pwd`
 finish() {
     cd $OLDWD
@@ -40,9 +40,9 @@ setup() {
         mkdir "${HOME}/bin" ||  echo_red "Failed to create bin directory." && exit 1
     fi
 
-    if [[ ! -f "${config_dir}/tmx" ]]; then
+    [ ! -f "${config_dir}/tmx" ] || [ "${in_arg}" = "update" ] && \
         wget --no-verbose -O tmx https://gist.githubusercontent.com/hungrykoder/2f6fd7742dacf54f304a4492b8f67351/raw/f53d49653ff8e67afa17b6e0da02524e6b5c7ca3/tmx
-    fi
+
     chmod a+x tmx
 
     local bin_files=("tmx")
@@ -61,10 +61,10 @@ setup() {
         fi
     done
 
-    [[ ! -f "${config_dir}/.bash_profile" ]] && \
+    [ ! -f "${config_dir}/.bash_profile" ]  || [ "${in_arg}" = "update" ] && \
         wget --no-verbose -O .bash_profile https://gist.github.com/hungrykoder/739edf831fe260033ccb0684afa0f13c/raw/1455a8b45571c6c061da71c36a58024f439c4e5f/.bash_profile
 
-    [[ ! -f "${config_dir}/.tmux.conf" ]] && \
+    [ ! -f "${config_dir}/.tmux.conf" ] || [ "${in_arg}" = "update" ] && \
         wget --no-verbose -O .tmux.conf https://gist.githubusercontent.com/hungrykoder/a895dd98340a66054aed157e8fb87e63/raw/5d52986aa6f39fb1400ac867fb16e1a2fcee4c79/tmux.conf
 
 
