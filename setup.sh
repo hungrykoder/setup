@@ -83,7 +83,7 @@ setup() {
                         exist=$(grep "user-config/.bash_profile" "${HOME}/.bash_profile")
                         if [ -z "${exist}" ]; then
                             echo_yellow "Existing $HOME/.bash_profile found. Adding statement to source ${config_dir}/.bash_profile in there"
-                            echo ". ${config_dir}/.bash_profile" >> "${HOME}/.bash_profile"
+                            echo "[[ -f \"${config_dir}/.bash_profile\" ]] && . ${config_dir}/.bash_profile" >> "${HOME}/.bash_profile"
                         fi
                     fi
                 fi
