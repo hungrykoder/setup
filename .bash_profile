@@ -1,8 +1,6 @@
 # Add `~/bin` to the `$PATH`
 export PS1="\[\033[33m\][\u@\[\033[1;31m\]\h]\]\033[0m in :\w \n\033[1;34m\][\d \t]\[\`if [[ \$? = "0" ]]; then echo '\e[0;32m > \e[0m'; else echo '\e[0;31m > \e[0m' ; fi\`\]\033[0m"
 
-alias ggpush='git push -u origin HEAD'
-alias ggpull='git pull origin HEAD'
 export PATH="$HOME/bin:$PATH";
 
 # Load the shell dotfiles, and then some:
